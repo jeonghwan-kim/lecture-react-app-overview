@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
+import { connect } from 'react-redux'
+import { addUser } from '../store/user'
 
-class UserAddForm extends React.Component {
+class AddUser extends React.Component {
   state = {
     inputName: ''
   }
@@ -10,8 +12,9 @@ class UserAddForm extends React.Component {
     })
   }
   onSubmit = e => {
-    e.preventDefault();
-    this.props.onAdd(this.state);
+    e.preventDefault()
+    const {inputName} = this.state
+    this.props.dispatch(addUser(inputName))
     this.setState({
       inputName: ''
     });
@@ -29,4 +32,4 @@ class UserAddForm extends React.Component {
   }
 }
 
-export default UserAddForm;
+export default connect()(AddUser)

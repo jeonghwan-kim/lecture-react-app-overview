@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import './User.css'
 
 class User extends Component {
@@ -34,4 +34,4 @@ class User extends Component {
   }
 }
 
-export default User;
+export default User

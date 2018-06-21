@@ -5,16 +5,16 @@ class UserList extends React.Component {
   style = {
     marginBottom: '16px'
   }
-  onDelete = data => {
-    this.props.onDelete(data)
+  onEdit = user => {
+    this.props.onEdit(user)
   }
-  onEdit = data => {
-    this.props.onEdit(data)
+  onDelete = user => {
+    this.props.onDelete(user)
   }
   render () {
-    const list = this.props.data.map(user => (
-      <User data={user} key={user.id} 
-        onDelete={this.onDelete} onEdit={this.onEdit}/>
+    const list = this.props.users.map(user => (
+      <User data={user} key={user.id} onEdit={this.onEdit} 
+        onDelete={this.onDelete}/>
     ))
     return (
       <div style={this.style}>
@@ -24,4 +24,4 @@ class UserList extends React.Component {
   }
 }
 
-export default UserList;
+export default UserList

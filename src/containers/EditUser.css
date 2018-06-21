@@ -1,4 +1,4 @@
-.UserEditForm-modal-mask {
+.EditUser-modal-mask {
   position: fixed;
   z-index: 9999;
   right: 0;
@@ -8,11 +8,11 @@
   background: rgba(0,0,0,.5);
   display: table;
 }
-.UserEditForm-modal-wrapper {
+.EditUser-modal-wrapper {
   display: table-cell;
   vertical-align: middle;
 }
-.UserEditForm-modal-container {
+.EditUser-modal-container {
   width: 300px;
   margin: 0 auto;
   padding: 20px 30px;
