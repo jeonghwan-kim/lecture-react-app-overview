@@ -1,0 +1,21 @@
+.UserEditForm-modal-mask {
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  display: table;
+}
+.UserEditForm-modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.UserEditForm-modal-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0, .6);
+}

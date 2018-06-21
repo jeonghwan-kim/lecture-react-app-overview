@@ -1,12 +1,12 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import Home from './Home';
+import Home from './Home/Home';
 import About from './About';
 import Topics from './Topics';
 import Login from './Login';
 
 const style = {
-  padding: '10px 15px'
+  padding: '0 15px 15px 10px'
 }
 
 const Main = () => (

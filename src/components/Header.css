@@ -1,0 +1,19 @@
+.Header {
+  /* border-bottom: 1px solid grey; */
+  padding: 15px;
+}
+.Header-title {
+  margin: 0;
+}
+.Header-menus{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+.Header-menus li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.Header-menus li:last-child {
+  margin-right: 0;
+}

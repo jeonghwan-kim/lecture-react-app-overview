@@ -1,0 +1,27 @@
+.User {
+  border: solid 1px grey;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  display: flex;
+}
+.User-id {
+  padding-right: 5px;
+}
+.User-id::after {
+  content: ' -'
+}
+.User-name {
+  flex: 1;
+}
+.User-controls ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.User-controls li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.User-controls li:last-child {
+  margin-right: 0;
+}

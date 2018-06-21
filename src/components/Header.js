@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-const style = {
-  borderBottom: '1px solid grey',
-  padding: '30px 15px',
-}
+import './Header.css';
+
 class Navbar extends Component {
   render () {
     return (
-      <ul>
+      <ul className="Header-menus">
         <li><Link to="/">홈</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/topics">Topics</Link></li>
@@ -16,9 +14,10 @@ class Navbar extends Component {
     );
   }
 }
+
 const Header = () => (
-  <header style={style}>
-    <h1>User Dashboard</h1>
+  <header className="Header">
+    <h1 className="Header-title">관리자 사이트</h1>
     <Navbar />
   </header>
 )
