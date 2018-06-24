@@ -1,5 +1,3 @@
-// import 'react-action
-
 /**
  * Action types
  */
@@ -43,7 +41,9 @@ export default (state = initialSatate, action) => {
         ...state,
         users: [
           ...state.users, {
-            id: state.users[state.users.length - 1].id + 1,
+            id: state.users.length ? 
+              state.users[state.users.length - 1].id + 1 : 
+              1,
             name: action.name
           }
         ]
