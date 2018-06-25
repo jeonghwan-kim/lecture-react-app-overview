@@ -1,10 +1,9 @@
-import {fetchUser as fetchUserApi} from '../api'
-
 /**
  * Action types
  */
 
-const REQEUST_USER = 'user/REQEUST_USER'
+export const REQEUST_USER = 'user/REQEUST_USER'
+export const FETCH_USER = 'user/FETCH_USER'
 export const RECEIVE_USER = 'user/RECEIVE_USER'
 export const ADD_USER = 'user/ADD_USER'
 export const EDIT_USER = 'user/EDIT_USER'
@@ -15,19 +14,14 @@ export const DELETE_USER = 'user/DELETE_USER'
  * Actions creator
  */
 
-export const fetchUserAsync = () => (dispatch) => {
-  dispatch(requestUser())
-  fetchUserApi()
-    .then(users => {
-      dispatch(receiveUser(users))
-    })
-}
-const requestUser = () => ({ type: REQEUST_USER })
-export const receiveUser = users => ({ type: RECEIVE_USER, users })
-export const addUser = name => ({ type: ADD_USER, name })
-export const editUser = user => ({ type: EDIT_USER, user })
-export const setEditUser = (toggle, user) => ({ type: SET_EDIT_USER, toggle, user })
-export const deleteUser = user => ({ type: DELETE_USER, user })
+
+export const fetchUser = _=> ({type: FETCH_USER})
+export const requestUser = _=> ({type: REQEUST_USER})
+export const receiveUser = users => ({type: RECEIVE_USER, users})
+export const addUser = name => ({type: ADD_USER, name })
+export const editUser = user => ({type: EDIT_USER, user})
+export const setEditUser = (toggle, user) => ({type: SET_EDIT_USER, toggle, user})
+export const deleteUser = user => ({type: DELETE_USER, user})
 
 const initialSatate = {
   users: [
