@@ -1,9 +1,12 @@
-import React from 'react';
-import User from './User';
+import React from 'react'
+import User from './User'
 
 class UserList extends React.Component {
   style = {
     marginBottom: '16px'
+  }
+  componentDidMount() {
+    this.props.fetch()
   }
   onEdit = user => {
     this.props.onEdit(user)
@@ -12,13 +15,14 @@ class UserList extends React.Component {
     this.props.onDelete(user)
   }
   render () {
+    const {isFetching} = this.props
     const list = this.props.users.map(user => (
       <User data={user} key={user.id} onEdit={this.onEdit} 
         onDelete={this.onDelete}/>
     ))
     return (
       <div style={this.style}>
-        {list}
+        {isFetching ? 'Loading...' : list}
       </div>
     )
   }

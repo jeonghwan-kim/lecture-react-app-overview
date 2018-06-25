@@ -1,10 +1,11 @@
 import { connect } from 'react-redux'
 import UserList from '../components/Home/UserList'
-import { setEditUser, deleteUser } from '../store/user'
+import { setEditUser, deleteUser, fetchUserAsync } from '../store/user'
 
 const mapStateToProps = state => {
   return {
-    users: state.user.users
+    users: state.user.users,
+    isFetching: state.user.isFetching
   }
 }
 
@@ -15,6 +16,9 @@ const mapDispatchToProps = dispatch => {
     },
     onDelete: user => {
       dispatch(deleteUser(user))
+    },
+    fetch: () => {
+      dispatch(fetchUserAsync())
     }
   }
 }

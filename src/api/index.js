@@ -4,9 +4,13 @@ let users = [
   {id: 3, name: 'Chris'},
 ];
 
+let delay = 800
+
 export const fetchUser = () => {
   console.log('api fetchUsers');
-  return Promise.resolve(users);
+  return new Promise(resolve => {
+    setTimeout(_=> resolve(users), delay)
+  })
 }
 
 export const createUser = ({name}) => {
