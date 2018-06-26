@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import UserList from '../components/Home/UserList'
-import { setEditUser, deleteUser, fetchUser } from '../store/user'
+import { setEditUser, deleteUser, fetchUser } from '../reducers/user'
 
 const mapStateToProps = state => {
   return {

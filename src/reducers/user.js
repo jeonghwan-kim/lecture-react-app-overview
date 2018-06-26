@@ -14,7 +14,6 @@ export const DELETE_USER = 'user/DELETE_USER'
  * Actions creator
  */
 
-
 export const fetchUser = _=> ({type: FETCH_USER})
 export const requestUser = _=> ({type: REQEUST_USER})
 export const receiveUser = users => ({type: RECEIVE_USER, users})
@@ -23,22 +22,18 @@ export const editUser = user => ({type: EDIT_USER, user})
 export const setEditUser = (toggle, user) => ({type: SET_EDIT_USER, toggle, user})
 export const deleteUser = user => ({type: DELETE_USER, user})
 
-const initialSatate = {
-  users: [
-  ],
-  isEditing: false,
-  isFetching: false,
-  editingUser: {
-    id: 0,
-    name: 'edited user'
-  }
-}
-
 /**
  * Reducers
  */
 
-export default (state = initialSatate, action) => {
+const initialState = {
+  users: [],
+  isEditing: false,
+  isFetching: false,
+  editingUser: {id: 0, name: 'edited user'}
+}
+
+export default (state = initialState, action) => {
   switch(action.type) {
     case ADD_USER:
       return {

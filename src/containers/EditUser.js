@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import './EditUser.css'
-import {editUser, setEditUser} from '../store/user'
+import {editUser, setEditUser} from '../reducers/user'
 
 class EditUser extends React.Component {
   constructor(props) {

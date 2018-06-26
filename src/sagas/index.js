@@ -1,5 +1,5 @@
 import {takeEvery, call, put} from 'redux-saga/effects'
-import {FETCH_USER, RECEIVE_USER, REQEUST_USER} from '../store/user'
+import {FETCH_USER, RECEIVE_USER, REQEUST_USER} from '../reducers/user'
 import {fetchUser as fetchUserApi} from '../api'
 
 export function* helloSaga() {
