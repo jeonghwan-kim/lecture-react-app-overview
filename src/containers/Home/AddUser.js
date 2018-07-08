@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addUser } from '../reducers/user'
+import { addUser } from '../../reducers/user'
 
 class AddUser extends React.Component {
   state = {

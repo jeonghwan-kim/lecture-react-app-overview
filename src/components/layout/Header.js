@@ -6,10 +6,9 @@ class Navbar extends Component {
   render () {
     return (
       <ul className="Header-menus">
-        <li><Link to="/">홈</Link></li>
+        <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/topics">Topics</Link></li>
-        <li><Link to="/login">로그인</Link></li>
       </ul>
     );
   }
@@ -17,7 +16,7 @@ class Navbar extends Component {
 
 const Header = () => (
   <header className="Header">
-    <h1 className="Header-title">관리자 사이트</h1>
+    <h1 className="Header-title">Admin Dashboard</h1>
     <Navbar />
   </header>
 )
