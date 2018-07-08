@@ -4,7 +4,7 @@ let users = [
   {id: 3, name: 'Chris'},
 ];
 
-let delay = 800
+let delay = 300
 
 export const fetchUser = () => {
   console.log('api fetchUsers');
@@ -15,23 +15,29 @@ export const fetchUser = () => {
 
 export const createUser = ({name}) => {
   console.log('api createUser', name)
-  users.push({
-    id: users[users.length - 1].id + 1,
-    name
+  return new Promise(resolve => {
+    users.push({
+      id: users[users.length - 1].id + 1,
+      name
+    })
+    setTimeout(_=>resolve(users), delay) 
   })
-  return Promise.resolve(users)
 }
 
-export const deleteUser = (id) => {
-  console.log('api deleteUser', id);
-  users = users.filter(u => u.id !== id)
-  return Promise.resolve(users)
+export const deleteUser = ({id}) => {
+  return new Promise(resolve => {
+    users = users.filter(u => u.id !== id)
+    setTimeout(_=> resolve(users), delay)
+  })
+  
 }
 
 export const updateUser = ({id, name}) => {
   console.log('api updateUser', id, name);
-  const user = users.filter(u => u.id === id)[0]
-  if (!user) return Promise.reject(Error('no user'))
-  user.name = name 
-  return Promise.resolve(users);
+  return new Promise(resolve => {
+    const user = users.filter(u => u.id === id)[0]
+    if (!user) return Promise.reject(Error('no user'))
+    user.name = name 
+    setTimeout(_=> resolve(users), delay)
+  })
 }

@@ -22,7 +22,8 @@ class UserList extends React.Component {
     ))
     return (
       <div style={this.style}>
-        {isFetching ? 'Loading...' : list}
+        {list}
+        {isFetching ? 'Loading...' : ''}
       </div>
     )
   }
